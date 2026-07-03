@@ -19,7 +19,7 @@
 	"environment": "server",
 	"entrypoints": {
 		"main": [
-			"com.midnightdoggo19.gatedaccess.Rcongate"
+			"com.midnightdoggo19.gatedaccess.GatedAccess"
 		]
 	},
 	"mixins": [
