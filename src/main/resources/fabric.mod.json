@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "gatedaccess",
+	"version": "${version}",
+	"name": "Gated Access",
+	"description": "Only allow certain commands to be send over RCON.",
+	"authors": [
+		{
+			"name": "Midnight Doggo",
+			"homepage": "https://github.com/midnightdoggo19/"
+		}
+	],
+	"contact": {
+		"sources": "https://github.com/midnightdoggo19/gated-access",
+		"issues": "https://github.com/midnightdoggo19/gated-access/issues"
+	},
+	"license": "CC BY-NC-SA 4.0",
+	"icon": "assets/gatedaccess/icon.png",
+	"environment": "server",
+	"entrypoints": {
+		"main": [
+			"com.midnightdoggo19.gatedaccess.Rcongate"
+		]
+	},
+	"mixins": [
+		{
+			"config": "gatedaccess.mixins.json",
+			"environment": "server"
+		}
+	],
+	"provides": [
+		"gated-access"
+	],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~1.21.6",
+		"java": ">=21",
+		"fabric-api": ">=0.119.5+1.21.5",
+		"cryonicconfig": "~1.21.4-1.0.0"
+	},
+	"recommends": {
+		"rconoutputnewline": "*"
+	}
+}

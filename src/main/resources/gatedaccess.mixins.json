@@ -1,0 +1,14 @@
+{
+	"required": true,
+	"package": "com.midnightdoggo19.gatedaccess.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"mixins": [
+      "MinecraftDedicatedServerMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
+}
