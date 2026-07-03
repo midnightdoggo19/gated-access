@@ -12,6 +12,11 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public class MinecraftDedicatedServerMixin {
 	@Inject(at = @At("HEAD"), method = "executeRconCommand")
 	private void init(String command, CallbackInfoReturnable<String> cir) throws Exception {
+		boolean enabled = CryonicConfig.getConfig(GatedAccess.MOD_ID).getBoolean("enabled", false);
+		if (!enabled) {
+			return;
+		}
+
 		String configCommands = CryonicConfig.getConfig(GatedAccess.MOD_ID).getString("allowedCommands", "list");
 		String[] allowedCommands = configCommands.split(",");
 
